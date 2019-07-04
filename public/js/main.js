@@ -4,12 +4,15 @@ var scroll = window.requestAnimationFrame || function (callback) {
 
 var element = document.querySelectorAll('.container')[0];
 
+var InternalVisual;
+
 (function loop() {
   var top = element.getBoundingClientRect().top;
   var width = element.clientWidth;
   var height = element.clientHeight;
   var visual = height + top;
   var font = (50 + visual / 30) * (width / 1300);
+  InternalVisual = visual;
   element.style.fontSize = font + 'px';
   element.style.letterSpacing = font / 3 * 2 + 'px';
   element.style.paddingTop = (-top) + 'px';

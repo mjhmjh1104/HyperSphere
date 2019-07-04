@@ -43,8 +43,8 @@ window.addEventListener('load', function () {
   });
 
   requestAnimationFrame(function Rotate() {
-    mesh.rotation.y += (Math.PI * .2 * ((targetScale - 1) * 3 + 1)) / 180;
-    mesh.rotation.x += (Math.PI * .2 * ((targetScale - 1) * 3 + 1)) / 180;
+    mesh.rotation.y += (Math.PI * .2 * ((scale - 1) * 5 + 1)) / 180;
+    mesh.rotation.x += (Math.PI * .2 * ((scale - 1) * 5 + 1)) / 180;
     renderer.render(scene, camera);
     requestAnimationFrame(Rotate);
   });
